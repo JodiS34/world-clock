@@ -8,9 +8,11 @@ function updateLosAngelesTime () {
 
   losAngelesTimeElement.innerHTML = losAnglesTime.format(
     "h:mm:ss[<small>]A[</small>]"
-  );
-
+    );
+    
+    updateLosAngelesTime();
     setInterval(updateLosAngelesTime, 1000);
+
 let SydneyElement = document.querySelector("#Sydney");
 let SydneyDateElement = SydneyElement.querySelector(".date");
 let SydneyTimeElement = SydneyElement.querySelector(".time");
