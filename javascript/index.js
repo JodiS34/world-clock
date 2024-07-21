@@ -1,14 +1,16 @@
 function updateTime() {
-  let losAngelesElement = document.querySelector("#los-Angles");
-  let losAngelesDateElement = losAngelesElement.querySelector(".date");
-  let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-  let losAnglesTime = moment().tz("America/Los_Angles");
+  // Los Angeles
+  let losAngelesElement = document.querySelector("#los-angeles");
+  if (losAngelesElement) {
+    let losAngelesDateElement = losAngelesElement.querySelector(".date");
+    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+    let losAngelesTime = moment().tz("America/Los_Angeles");
 
-  losAngelesDateElement.innerHTML = losAnglesTime.format("MMMM Do YYYY");
-
-  losAngelesTimeElement.innerHTML = losAnglesTime.format(
-    "h:mm:ss[<small>]A[</small>]"
-  );
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
+    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
   let SydneyElement = document.querySelector("#Sydney");
   let SydneyDateElement = SydneyElement.querySelector(".date");
@@ -18,7 +20,7 @@ function updateTime() {
   SydneyDateElement.innerHTML = SydneyTime.format("MMMM Do YYYY");
 
   SydneyTimeElement.innerHTML = SydneyTime.format(
-    "h:mm:ss[<small>]A[</small>]"
+    "h:mm:ss [<small>]A[</small>]"
   );
 }
 
